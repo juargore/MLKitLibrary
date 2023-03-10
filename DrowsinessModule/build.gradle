@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+    id 'signing'
+}
+
+android {
+    compileSdk 33
+    namespace 'com.bluetrailsoft.drowsinessmodule'
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.mlkit:camera:16.0.0-beta3'
+    implementation 'com.google.mlkit:face-detection:16.1.5'
+    implementation "com.google.mlkit:face-mesh-detection:16.0.0-beta1"
+    implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.10"))
+}
+
+// task to export the library to maven local
+project.afterEvaluate {
+    publishing {
+        publications {
+            library(MavenPublication) {
+                groupId = 'com.bluetrailsoft.drowsinessmodule'
+                artifactId = 'DrowsinessModule'
+                version '0.2.0'
+
+                artifact bundleReleaseAar
+
+                pom.withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+                    configurations.implementation.allDependencies.each {
+                        if (it.group != null && (it.name != null || "unspecified" == it.name) && it.version != null) {
+                            def dependencyNode = dependenciesNode.appendNode('dependency')
+                            dependencyNode.appendNode('groupId', it.group)
+                            dependencyNode.appendNode('artifactId', it.name)
+                            dependencyNode.appendNode('version', it.version)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

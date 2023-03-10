@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="GENERAL">
+        <SwitchPreference
+            android:key="@string/use_advanced_mesh_key"
+            android:title="@string/use_advanced_mesh_title" />
+
+        <SwitchPreference
+            android:key="@string/mesh_tracking_key"
+            android:title="@string/mesh_tracking_title" />
+
+        <SwitchPreference
+            android:key="@string/sound_tracking_key"
+            android:title="@string/sound_tracking_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="DETECTION">
+        <SwitchPreference
+            app:isPreferenceVisible="false"
+            android:key="@string/service_tracking_key"
+            android:title="@string/service_tracking_title"
+            android:summary="@string/service_tracking_hint"/>
+
+        <ListPreference
+            android:key="@string/fps_tracking_key"
+            android:title="@string/fps_tracking_title"
+            android:summary="@string/fps_tracking_hint"/>
+
+        <ListPreference
+            android:key="@string/red_flag_duration_tracking_key"
+            android:title="@string/red_flag_duration_tracking_title"
+            android:summary="@string/red_flag_duration_tracking_hint"/>
+
+        <ListPreference
+            android:key="@string/yellow_flag_duration_tracking_key"
+            android:title="@string/yellow_flag_duration_tracking_title"
+            android:summary="@string/yellow_flag_duration_tracking_hint"/>
+
+        <ListPreference
+            android:key="@string/wheel_position_tracking_key"
+            android:title="@string/wheel_position_tracking_title"
+            android:summary="@string/wheel_position_tracking_hint"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

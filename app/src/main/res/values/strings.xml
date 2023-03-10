@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Drowsiness Detector</string>
+    <string name="title_activity_split">Drowsiness Detector</string>
+
+    <string name="notification_title">Wake up!!</string>
+    <string name="notification_text">Stop please! Walk around the car!</string>
+    <string name="notification_prompt">To provide a better user experience, this app issues a notification every time a red flag is raised in the library. We need your permissions to accomplish this action. \n\nYou will be redirected to notification settings</string>
+    <string name="title_activity_settings">Drowsiness Detector Settings</string>
+    <string name="permissions_storage_message">This app needs permissions to access your internal storage and save the videos.\n\nYou will be redirected to the settings so that you can manually enable the storage permission.</string>
+
+    <string name="log_top_right">%s fps\nDriver position:\n%s</string>
+
+    <!-- Preferences screen -->
+    <string name="use_advanced_mesh_key">use_advanced_mesh</string>
+    <string name="use_advanced_mesh_title">Use advanced mesh</string>
+
+    <string name="mesh_tracking_key">switch_mesh</string>
+    <string name="mesh_tracking_title">Show mesh</string>
+
+    <string name="sound_tracking_key">switch_sound</string>
+    <string name="sound_tracking_title">Sound enabled</string>
+
+    <string name="fps_tracking_key">list_fps</string>
+    <string name="fps_tracking_title">FPS (Frames Per Second)</string>
+    <string name="fps_tracking_hint">Process these frames per second</string>
+
+    <string name="red_flag_duration_tracking_key">list_flag_duration_red</string>
+    <string name="red_flag_duration_tracking_title">Red flag duration (seconds)</string>
+    <string name="red_flag_duration_tracking_hint">Elapsed time to display the red flag</string>
+
+    <string name="yellow_flag_duration_tracking_key">list_flag_duration_yellow</string>
+    <string name="yellow_flag_duration_tracking_title">Yellow flag duration (seconds)</string>
+    <string name="yellow_flag_duration_tracking_hint">Elapsed time to display the yellow flag</string>
+
+    <string name="wheel_position_tracking_key">list_wheel_position</string>
+    <string name="wheel_position_tracking_title">Steering wheel position</string>
+    <string name="wheel_position_tracking_hint">Left or right hand drive</string>
+
+    <string name="service_tracking_key">switch_service</string>
+    <string name="service_tracking_title">Start as Service</string>
+    <string name="service_tracking_hint">Service or Normal App (Not available for video input)</string>
+
+    <string name="start_detecting">Start detection</string>
+    <string name="logs_on_screen"> %s —> %s</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960071792071",
+    "project_id": "dacia-c6e4b",
+    "storage_bucket": "dacia-c6e4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960071792071:android:dfee06cf1f7d67d9ea15e2",
+        "android_client_info": {
+          "package_name": "com.bluetrailsoft.drowsinessdetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960071792071-fu8ci7r4m7s0bdok3s446pg5lfqods31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFqoD_cFUvHAstfNGnStq0WOO3tqB_13s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960071792071-fu8ci7r4m7s0bdok3s446pg5lfqods31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
